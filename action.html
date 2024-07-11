@@ -49,7 +49,9 @@
             </button>
           </li>
           <li class="nav-item">
-            <button class="btn btn-info btn-lg text-light font-weight-bold new-meeting">
+            <button
+              class="btn btn-info btn-lg text-light font-weight-bold new-meeting"
+            >
               Start a meeting
             </button>
           </li>
@@ -72,8 +74,9 @@
                 class="btn btn-lg text-light font-weight-bold display-center new-meeting"
                 style="background-color: #01796b"
               >
-                <span class="material-icons align-middle align-self-center mr-2">video_call</span>New
-                Meetings
+                <span class="material-icons align-middle align-self-center mr-2"
+                  >video_call</span
+                >New Meetings
               </button>
             </li>
             <li class="pl-3">
@@ -90,7 +93,11 @@
                 />
               </button>
             </li>
-            <li class="text-dark pl-2 font-weight-bold cursor-pointer join-action">Join</li>
+            <li
+              class="text-dark pl-2 font-weight-bold cursor-pointer join-action"
+            >
+              Join
+            </li>
           </ul>
         </div>
         <div class="container w-50">
@@ -109,21 +116,22 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-      $(function(){
-         $(document).on("click",".join-meeting",function(){
-            $(".enter-code").focus();
-         })
-         $(document).on("click",".join-action",function(){
-            var join_value=$('.enter-code').val();
-            var meetingUrl=window.location.origin+"?meetingID="+join_value;
-            window.location.replace(meetingUrl);
-         })
-         $(document).on("click",".new-meeting",function(){
-            var eight_d_value =Math.floor(Math.random()*100000000);
-            var meetingUrl=window.location.origin+"?meetingID="+eight_d_value;
-            window.location.replace(meetingUrl);
-         })
-      })
+      $(function () {
+        $(document).on("click", ".join-meeting", function () {
+          $(".enter-code").focus();
+        });
+        $(document).on("click", ".join-action", function () {
+          var join_value = $(".enter-code").val();
+          var meetingUrl = window.location.origin + "?meetingID=" + join_value;
+          window.location.replace(meetingUrl);
+        });
+        $(document).on("click", ".new-meeting", function () {
+          var eight_d_value = Math.floor(Math.random() * 100000000);
+          var meetingUrl =
+            window.location.origin + "?meetingID=" + eight_d_value;
+          window.location.replace(meetingUrl);
+        });
+      });
     </script>
   </body>
 </html>
